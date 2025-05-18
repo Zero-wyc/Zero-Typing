@@ -1,0 +1,265 @@
+.app-header {
+    padding: 10px;
+    .ant-btn-link,
+    .radio-text,
+    .ant-radio-wrapper {
+        color: var(--head-text-color);
+        .ant-radio-inner {
+            border-color: var(--primary-color);
+            &::after {
+                background-color: var(--primary-color);
+            }
+        }
+    }
+}
+
+.header-modal--words-length {
+    text-align: right;
+    .error-word {
+        color: var(--error-color);
+    }
+}
+.header-modal-confirm-btn {
+    background-color: var(--bg-color);
+    border-color: var(--bg-color);
+    &:hover,
+    &:focus {
+        background-color: var(--bg-color);
+        border-color: var(--bg-color);
+        filter: brightness(1.5);
+    }
+    span {
+        color: var(--head-text-color);
+    }
+}
+.header-modal-setting {
+    .ant-modal-content {
+        background-color: #152128;
+        .ant-tabs-nav {
+            color: #e0e0e0;
+            .ant-tabs-tab:hover {
+                color: #e0e0e0;
+                filter: brightness(1.5);
+            }
+            .ant-tabs-tab-active {
+                color: var(--primary-color);
+            }
+        }
+        .ant-tabs-ink-bar {
+            background-color: var(--primary-color);
+        }
+        .header-modal--total {
+            color: #e0e0e0;
+        }
+        
+        .ant-input-disabled {
+            background-color: #1a2930;
+            color: #8796A5;
+        }
+        
+        .ant-input {
+            background-color: #263238;
+            border-color: #263238;
+            color: #e0e0e0;
+            
+            &:focus {
+                border-color: #61AFEF;
+                box-shadow: 0 0 0 2px rgba(97, 175, 239, 0.2);
+            }
+        }
+        
+        .ant-modal-close {
+            color: #e0e0e0;
+            
+            &:hover {
+                color: #E5C07B;
+            }
+        }
+    }
+}
+.header-modal-theme {
+    .ant-modal-content {
+        background-color: #152128;
+        color: #e0e0e0;
+        
+        .ant-modal-close-x {
+            color: var(--primary-color);
+        }
+        
+        .ant-modal-header {
+            background-color: #152128;
+            border-bottom-color: #2a3b47;
+            
+            .ant-modal-title {
+                color: #e0e0e0;
+            }
+        }
+    }
+    &--box {
+        padding-top: 24px;
+        .theme-display-block {
+            height: 50px;
+            line-height: 50px;
+            border-radius: 10px;
+            margin-top: 12px;
+            cursor: pointer;
+            text-align: center;
+            transition: transform 0.2s ease;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.header-modal-bg {
+    .ant-modal-content {
+        background-color: #152128;
+        color: #e0e0e0;
+        
+        .ant-modal-header {
+            background-color: #152128;
+            border-bottom-color: #2a3b47;
+            
+            .ant-modal-title {
+                color: #E5C07B;
+            }
+        }
+        
+        .ant-modal-body {
+            p {
+                color: #e0e0e0;
+            }
+            
+            .ant-input {
+                background-color: #263238;
+                border-color: #263238;
+                color: #e0e0e0;
+                
+                &::placeholder {
+                    color: #8796A5;
+                }
+                
+                &:focus {
+                    border-color: #61AFEF;
+                    box-shadow: 0 0 0 2px rgba(97, 175, 239, 0.2);
+                }
+            }
+        }
+        
+        .ant-modal-footer {
+            border-top-color: #2a3b47;
+            
+            .ant-btn {
+                background-color: #263238;
+                border-color: #263238;
+                color: #e0e0e0;
+                
+                &:hover:not([disabled]) {
+                    background-color: #37474F;
+                    border-color: #37474F;
+                }
+                
+                &[disabled] {
+                    background-color: #152128;
+                    border-color: #2a3b47;
+                    color: #8796A5;
+                }
+                
+                &.ant-btn-primary:not([disabled]) {
+                    background-color: #61AFEF;
+                    border-color: #61AFEF;
+                    color: #152128;
+                    
+                    &:hover {
+                        background-color: #56A4E2;
+                        border-color: #56A4E2;
+                    }
+                }
+            }
+        }
+        
+        .ant-modal-close {
+            color: #e0e0e0;
+            
+            &:hover {
+                color: #E5C07B;
+            }
+        }
+    }
+}
+
+.header-modal-about {
+    .ant-modal-content {
+        background-color: #152128;
+        color: #e0e0e0;
+        
+        .ant-modal-header {
+            background-color: #152128;
+            border-bottom-color: #2a3b47;
+            
+            .ant-modal-title {
+                color: #E5C07B;
+            }
+        }
+        
+        .ant-modal-body {
+            .about-content {
+                p {
+                    color: #e0e0e0;
+                    font-size: 16px;
+                    margin-bottom: 16px;
+                }
+                
+                a {
+                    color: #61AFEF;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    
+                    &:hover {
+                        color: #56A4E2;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        
+        .ant-modal-close {
+            color: #e0e0e0;
+            
+            &:hover {
+                color: #E5C07B;
+            }
+        }
+    }
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    }
+
+    14% {
+        transform: scale(1.1);
+    }
+
+    28% {
+        transform: scale(1);
+    }
+
+    42% {
+        transform: scale(1.1);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+}
+
+.heartBeat {
+    animation-name: heartBeat;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}

@@ -1,0 +1,31 @@
+/* 
+ * 替代弃用的 -ms-high-contrast 媒体查询
+ * 参考: https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/
+ */
+
+@media (forced-colors: active) {
+  
+  /* 在这里添加针对高对比度模式的样式 */
+  /* 这些样式将覆盖使用弃用的-ms-high-contrast的样式 */
+  
+  /* 例如，确保按钮具有可见边框 */
+  button {
+    border: 1px solid ButtonText;
+  }
+  
+  /* 确保链接在高对比度模式下清晰可见 */
+  a {
+    color: linktext; /* 使用小写以符合linter要求 */
+    text-decoration: underline;
+  }
+  
+  /* 确保输入框边框在高对比度模式下可见 */
+  input, textarea, select {
+    border: 1px solid ButtonText;
+  }
+  
+  /* 确保焦点状态在高对比度模式下清晰可见 */
+  :focus {
+    outline: 2px solid Highlight;
+  }
+} 

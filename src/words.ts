@@ -826,7 +826,7 @@ const defaultWords: Word[] = [
     },
     {
         label: '维什戴尔',
-        text: 'weishendaier',
+        text: 'weishidaier',
     },
     {
         label: '碎骨',

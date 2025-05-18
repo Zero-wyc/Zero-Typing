@@ -18,22 +18,59 @@ export const getThemeByName = (themeName: string) => {
 };
 
 export const changeTheme = (theme: typeof list[0]) => {
-    // 清除背景图片相关的localStorage
-    storage.local.remove('BACK_IMG_URL');
-    storage.local.remove('BACK_IMG_BLUR');
-    storage.local.remove('BACK_IMG_OPACITY');
-    
-    // 清除Redux状态中的背景图片设置
-    store.dispatch({ type: 'setBackImgUrl', payload: '' });
-    store.dispatch({ type: 'setBackImgBlur', payload: 0 });
-    store.dispatch({ type: 'setBackImgOpacity', payload: 1 });
-    
-    // 只有在主题被点击时才设置纯色背景
-    if (storage.local.get('THEME_CLICKED') === true) {
+    // 切换主题时处理背景设置
+    if (theme.name === 'default') {
+        // 检查是否是第一次加载还是用户点击
+        const isUserClick = document.readyState === 'complete';
+        
+        if (isUserClick) {
+            // 用户点击default主题 - 清除背景图片，使用纯色背景
+            storage.local.remove('BACK_IMG_URL');
+            storage.local.remove('BACK_IMG_BLUR');
+            storage.local.remove('BACK_IMG_OPACITY');
+            
+            // 清除Redux状态中的背景图片设置
+            store.dispatch({ type: 'setBackImgUrl', payload: '' });
+            store.dispatch({ type: 'setBackImgBlur', payload: 0 });
+            store.dispatch({ type: 'setBackImgOpacity', payload: 1 });
+            
+            // 设置标记，表示用户已点击过default主题
+            storage.local.set('DEFAULT_THEME_CLICKED', true);
+            
+            // 设置纯色背景
+            document.body.style.backgroundImage = 'none';
+            document.body.style.backgroundColor = theme.bgColor;
+        } else {
+            // 初始加载 - 检查是否之前点击过default主题
+            const defaultThemeClicked = storage.local.get('DEFAULT_THEME_CLICKED');
+            
+            if (defaultThemeClicked) {
+                // 之前点击过default主题，使用纯色背景
+                document.body.style.backgroundImage = 'none';
+                document.body.style.backgroundColor = theme.bgColor;
+            } else {
+                // 从未点击过default主题，使用background背景图
+                const style = getComputedStyle(document.documentElement);
+                const defaultBgImage = style.getPropertyValue('--body-back-image');
+                document.body.style.backgroundImage = defaultBgImage || 'var(--body-back-image)';
+                document.body.style.backgroundColor = '';
+            }
+        }
+    } else {
+        // 非default主题 - 清除背景图片设置
+        storage.local.remove('BACK_IMG_URL');
+        storage.local.remove('BACK_IMG_BLUR');
+        storage.local.remove('BACK_IMG_OPACITY');
+        
+        // 清除Redux状态中的背景图片设置
+        store.dispatch({ type: 'setBackImgUrl', payload: '' });
+        store.dispatch({ type: 'setBackImgBlur', payload: 0 });
+        store.dispatch({ type: 'setBackImgOpacity', payload: 1 });
+        
+        // 设置纯色背景，使用主题的bgColor
         document.body.style.backgroundImage = 'none';
         document.body.style.backgroundColor = theme.bgColor;
     }
-    // 否则保持甘城2_1背景图
 
     site.setSiteIcon(theme.bgColor, theme.textColor);
     

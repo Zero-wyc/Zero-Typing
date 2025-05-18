@@ -115,34 +115,118 @@
 .header-modal-bg {
     .ant-modal-content {
         background-color: #152128;
-        color: #e0e0e0;
+        color: #ffffff;
+        
+        .ant-modal-close-x {
+            color: #ffffff;
+        }
         
         .ant-modal-header {
             background-color: #152128;
             border-bottom-color: #2a3b47;
             
             .ant-modal-title {
-                color: #E5C07B;
+                color: #ffffff;
+                font-weight: bold;
             }
         }
         
         .ant-modal-body {
+            color: #ffffff;
+            
             p {
-                color: #e0e0e0;
+                color: #ffffff !important;
             }
             
             .ant-input {
                 background-color: #263238;
                 border-color: #263238;
-                color: #e0e0e0;
+                color: #ffffff;
                 
                 &::placeholder {
-                    color: #8796A5;
+                    color: rgba(255, 255, 255, 0.5);
                 }
                 
                 &:focus {
-                    border-color: #61AFEF;
+                    border-color: var(--primary-color);
                     box-shadow: 0 0 0 2px rgba(97, 175, 239, 0.2);
+                }
+            }
+            
+            .ant-tabs-nav {
+                .ant-tabs-tab {
+                    color: rgba(255, 255, 255, 0.7);
+                    
+                    &.ant-tabs-tab-active {
+                        .ant-tabs-tab-btn {
+                            color: #ffffff;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                
+                .ant-tabs-ink-bar {
+                    background-color: #ffffff;
+                }
+            }
+            
+            .ant-slider {
+                .ant-slider-rail {
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+                
+                .ant-slider-track {
+                    background-color: var(--primary-color);
+                }
+                
+                .ant-slider-handle {
+                    border-color: var(--primary-color);
+                }
+                
+                .ant-tooltip {
+                    .ant-tooltip-inner {
+                        color: #ffffff;
+                        background-color: #263238;
+                    }
+                    
+                    .ant-tooltip-arrow-content {
+                        background-color: #263238;
+                    }
+                }
+            }
+            
+            .bg-image-uploader {
+                .ant-upload-list-item-info {
+                    color: #ffffff;
+                }
+            }
+            
+            /* 确保模态框中所有文字颜色为白色 */
+            .ant-upload {
+                color: #ffffff;
+            }
+            
+            button {
+                color: #ffffff;
+            }
+            
+            /* 上传按钮 */
+            .upload-local-image-btn.ant-btn,
+            button.upload-local-image-btn {
+                background-color: #263238 !important;
+                border-color: #ffffff !important;
+                color: #ffffff !important;
+                
+                &:hover, &:focus {
+                    background-color: #36464E !important;
+                    border-color: #ffffff !important;
+                    color: #ffffff !important;
+                }
+                
+                &:active {
+                    background-color: #36464E !important;
+                    border-color: #ffffff !important;
+                    color: #ffffff !important;
                 }
             }
         }
@@ -153,7 +237,7 @@
             .ant-btn {
                 background-color: #263238;
                 border-color: #263238;
-                color: #e0e0e0;
+                color: #ffffff;
                 
                 &:hover:not([disabled]) {
                     background-color: #37474F;
@@ -163,27 +247,28 @@
                 &[disabled] {
                     background-color: #152128;
                     border-color: #2a3b47;
-                    color: #8796A5;
+                    color: rgba(255, 255, 255, 0.5);
                 }
                 
                 &.ant-btn-primary:not([disabled]) {
-                    background-color: #61AFEF;
-                    border-color: #61AFEF;
+                    background-color: var(--primary-color);
+                    border-color: var(--primary-color);
                     color: #152128;
                     
                     &:hover {
-                        background-color: #56A4E2;
-                        border-color: #56A4E2;
+                        background-color: var(--primary-color);
+                        border-color: var(--primary-color);
+                        opacity: 0.9;
                     }
                 }
             }
         }
         
         .ant-modal-close {
-            color: #e0e0e0;
+            color: #ffffff;
             
             &:hover {
-                color: #E5C07B;
+                color: var(--primary-color);
             }
         }
     }

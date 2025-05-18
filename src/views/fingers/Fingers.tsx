@@ -228,6 +228,7 @@ const Fingers: React.FC<MapState & MapDispatch> = (props) => {
                         </Button>
                     </div>
                     <div className="home-show-main">
+                        <div className="window-blur-background"></div>
                         {typingEnd && <div className="type-end"></div>}
                         <Spin spinning={loading} delay={50} wrapperClassName="loading-wrapper">
                             <div className="home-show-main-window" ref={mainWindowEl}>
@@ -294,12 +295,6 @@ const Fingers: React.FC<MapState & MapDispatch> = (props) => {
                                 trigger="click"
                             >
                                 <div className="home-countdown">
-                                    <Countdown
-                                        className="home-countdown-main"
-                                        value={deadline}
-                                        format="m:ss"
-                                        onFinish={onCountdownFinish}
-                                    ></Countdown>
                                     <div
                                         className={`home-countdown-placeholder ${
                                             timeStartRef.current ? 'time-run' : ''
@@ -307,6 +302,14 @@ const Fingers: React.FC<MapState & MapDispatch> = (props) => {
                                     >
                                         {deadlineText}
                                     </div>
+                                    <Countdown
+                                        className={`home-countdown-main ${
+                                            timeStartRef.current ? 'active' : ''
+                                        }`}
+                                        value={deadline}
+                                        format="m:ss"
+                                        onFinish={onCountdownFinish}
+                                    ></Countdown>
                                 </div>
                             </Popover>
                         </Col>

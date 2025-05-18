@@ -17,7 +17,7 @@
     /* // @box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.15); // 浮层阴影 */
 
     --bg-color: #282c34;
-    --body-back-image: url('./images/甘城2_1.png');
+    --body-back-image: url('../images/background.png');
     --head-text-color: #fffffe;
 
     --home-window-bg-color: #fffffd;
@@ -50,5 +50,5 @@ body {
 
 /* 打包后的环境下直接设置背景图片的备选方案 */
 body:not([style*="background-image"]) {
-    background-image: url('./images/甘城2_1.png');
+    background-image: url('../images/background.png');
 }

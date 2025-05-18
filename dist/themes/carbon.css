@@ -1,7 +1,7 @@
 :root {
     --primary-color: #ed6b21;
     --bg-color: #575d5e;
-    --body-back-image: none;
+    --body-back-image: url('../images/background.png');
     --head-text-color: #e3d9c6;
     --home-window-bg-color: #e3d9c6;
     --home-window-text-color: #575d5e;

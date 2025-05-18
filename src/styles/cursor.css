@@ -1,0 +1,26 @@
+/* 全局鼠标样式 */
+* {
+    cursor: url('/cursors/Link.cur'), auto !important;
+}
+
+/* 对于可点击元素，保持默认的指针样式 */
+button,
+a,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    cursor: pointer !important;
+}
+
+/* 对于文本输入区域，保持文本输入样式 */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+    cursor: text !important;
+} 

@@ -4,8 +4,7 @@
     "version": "20231127a",
     "packageManager": "pnpm@6.27.1",
     "repository": {
-        "url": "https://gitee.com/barneyZhao/typing-cn.git",
-        "url-github": "https://github.com/BarneyZhao/typing-cn.git"
+        "url": "https://github.com/Zero-wyc/Zero-Typing"
     },
     "scripts": {
         "dev": "vite",

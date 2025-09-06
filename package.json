@@ -4,14 +4,12 @@
     "version": "20231127a",
     "packageManager": "pnpm@6.27.1",
     "repository": {
-        "url": "https://github.com/Zero-wyc/Zero-Typing"
+        "url": "https://github.com/Zero-wyc/Zero-Typing.github.io"
     },
     "scripts": {
         "dev": "vite",
-        "build": "tsc && vite build --mode nobase",
-        "build-base": "tsc && vite build",
-        "preview": "vite preview --base=/",
-        "preview-base": "vite preview",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
         "update-version": "node scripts/updateVersion.js",
         "online": "npm run build && node scripts/deploy.js master docs-nobase/",
         "online-base": "npm run build-base && node scripts/deploy.js master docs/",

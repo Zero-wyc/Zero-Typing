@@ -45,5 +45,3 @@ jobs:
         publish_dir: ./dist
         # 保持提交历史
         keep_files: true
-        # 添加 CNAME 文件
-        cname: typing.github.zero251.xyz

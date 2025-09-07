@@ -43,3 +43,9 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
+        # 确保部署到正确的分支，通常是gh-pages
+        publish_branch: gh-pages
+        # 清空目标分支，避免旧文件残留
+        force_orphan: true
+        # 设置提交信息
+        commit_message: 'Deploy ${{ github.sha }} to GitHub Pages'

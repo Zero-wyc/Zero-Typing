@@ -895,7 +895,13 @@ const Header: React.FC<MapState & MapDispatch> = (props) => {
                     <p>来自一个FW的fork并进行一些修改</p>
                     <p>改自 <a href="https://github.com/barneyzhao/typing-cn" target="_blank" rel="noopener noreferrer">Barneyzhao</a></p>
                     <p>
-                        <span>有兴趣来个人主页看看嘛QAQ</span>
+                        <span>
+                            有兴趣来
+                            {' '}
+                            <a href="https://zero251.xyz" target="_blank" rel="noopener noreferrer">个人主页</a>
+                            {' '}
+                            看看嘛QAQ
+                        </span>
                     </p>
                     <p>
                         <span>Gitbub</span>：

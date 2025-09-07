@@ -841,8 +841,8 @@ const defaultWords: Word[] = [
         text: 'sikadi',
     },
     {
-        label: '陈',
-        text: 'chen',
+        label: '陈晖洁',
+        text: 'chenhuijie',
     },
     {
         label: '银灰',
@@ -870,7 +870,7 @@ const defaultWords: Word[] = [
     },
     {
         label: '蕾缪安',
-        text: 'leimouan',
+        text: 'leimiuan',
     },
     {
         label: '阿尔图罗',
@@ -895,10 +895,6 @@ const defaultWords: Word[] = [
     {
         label: '棘刺',
         text: 'jici',
-    },
-    {
-        label: '黍',
-        text: 'shu',
     },
     {
         label: '乌尔比安',
@@ -947,10 +943,6 @@ const defaultWords: Word[] = [
     {
         label: '神之眼',
         text: 'shenzhiyan',
-    },
-    {
-        label: '七国',
-        text: 'qiguo',
     },
     {
         label: '提瓦特',
@@ -1089,10 +1081,6 @@ const defaultWords: Word[] = [
         text: 'geheina',
     },
     {
-        label: '三一',
-        text: 'sanyi',
-    },
-    {
         label: '千年',
         text: 'qiannian',
     },
@@ -1115,10 +1103,6 @@ const defaultWords: Word[] = [
     {
         label: '伊织',
         text: 'yizhi',
-    },
-    {
-        label: '梓',
-        text: 'zi',
     },
     {
         label: '纱织',
@@ -1197,24 +1181,12 @@ const defaultWords: Word[] = [
         text: 'yuekecheng',
     },
     {
-        label: '妮可',
-        text: 'nike',
-    },
-    {
-        label: '比利',
-        text: 'bili',
-    },
-    {
         label: '安比',
         text: 'anbi',
     },
     {
         label: '朱鸢',
         text: 'zhuyuan',
-    },
-    {
-        label: '锏',
-        text: 'jian',
     },
     {
         label: '星奏',
@@ -1285,10 +1257,6 @@ const defaultWords: Word[] = [
         text: 'mojin',
     },
     {
-        label: '一方通行',
-        text: 'yifangtongxing',
-    },
-    {
         label: '后藤独',
         text: 'houtengdu',
     },
@@ -1327,6 +1295,10 @@ const defaultWords: Word[] = [
     {
         label: '无刺有刺',
         text: 'wuciyouci',
+    },
+    {
+        label: '天有四时',
+        text: 'tianyousishi',
     },
 ];
 

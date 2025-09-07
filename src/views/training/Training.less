@@ -50,6 +50,14 @@
             left: 2%;
             top: -250px;
             pointer-events: none;
+            line-height: 1.0;
+            max-height: calc(1.0em * 2); /* 限制为两行高度 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            white-space: normal;
         }
     }
     .Training-count {

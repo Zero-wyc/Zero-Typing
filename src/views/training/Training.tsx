@@ -9,6 +9,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 import Keyboard from '@/components/keyboard/Keyboard';
 import './Training.less';
+import TwoLineClamp from '@/components/TwoLineClamp/TwoLineClamp';
 
 const LEFT = ['Q', 'W', 'E', 'R', 'T', 'A', 'S', 'D', 'F', 'G', 'Z', 'X', 'C', 'V', 'B'];
 const LEFT_NUM = ['1', '2', '3', '4', '5', '6'];
@@ -135,7 +136,7 @@ const Training: React.FC = () => {
                 <Input ref={inputEl} onKeyDown={mainInputKeyDown} onKeyUp={inputKeyUp} />
             </div>
             <div className="Training__desc">
-                <div>{keyDesc}</div>
+                <TwoLineClamp text={keyDesc} className="Training__desc__clamp" />
             </div>
             <div className="Training-count">
                 <div className="correct">{correctCount}</div>

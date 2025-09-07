@@ -6,7 +6,7 @@
  */
 import site from '@/utils/siteIcon';
 import storage from '@/utils/storage';
-import store from '@/store';
+import store, { $dispatch } from '@/store';
 
 import list from './config';
 
@@ -30,9 +30,9 @@ export const changeTheme = (theme: typeof list[0]) => {
             storage.local.remove('BACK_IMG_OPACITY');
             
             // 清除Redux状态中的背景图片设置
-            store.dispatch({ type: 'setBackImgUrl', payload: '' });
-            store.dispatch({ type: 'setBackImgBlur', payload: 0 });
-            store.dispatch({ type: 'setBackImgOpacity', payload: 1 });
+            $dispatch('setBackImgUrl', '');
+            $dispatch('setBackImgBlur', 0);
+            $dispatch('setBackImgOpacity', 1);
             
             // 设置标记，表示用户已点击过default主题
             storage.local.set('DEFAULT_THEME_CLICKED', true);
@@ -63,9 +63,9 @@ export const changeTheme = (theme: typeof list[0]) => {
         storage.local.remove('BACK_IMG_OPACITY');
         
         // 清除Redux状态中的背景图片设置
-        store.dispatch({ type: 'setBackImgUrl', payload: '' });
-        store.dispatch({ type: 'setBackImgBlur', payload: 0 });
-        store.dispatch({ type: 'setBackImgOpacity', payload: 1 });
+        $dispatch('setBackImgUrl', '');
+        $dispatch('setBackImgBlur', 0);
+        $dispatch('setBackImgOpacity', 1);
         
         // 设置纯色背景，使用主题的bgColor
         document.body.style.backgroundImage = 'none';

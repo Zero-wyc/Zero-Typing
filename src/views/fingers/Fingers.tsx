@@ -147,7 +147,7 @@ const Fingers: React.FC<MapState & MapDispatch> = (props) => {
                 wordContainerRow.lastElementChild.offsetTop -
                     wordContainerRow.offsetTop -
                     outterScrollTop <
-                oneLineHeightRef.current * 3 + 1
+                oneLineHeightRef.current * 2 + 1
             ) {
                 pushWordToArr();
             }

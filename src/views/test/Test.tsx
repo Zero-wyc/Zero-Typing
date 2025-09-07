@@ -2,6 +2,7 @@ import { Input } from 'antd';
 import React, { useState, useRef, useEffect } from 'react';
 
 import './Test.less';
+import TwoLineClamp from '@/components/TwoLineClamp/TwoLineClamp';
 import beepMp3 from './beep.mp3';
 
 const Test: React.FC = () => {
@@ -38,7 +39,7 @@ const Test: React.FC = () => {
         <div className="Test">
             <Input className="home-input Test__input" onKeyDown={mainInputKeyDown}></Input>
             <div className="Test__desc">
-                <div>{keyDesc}</div>
+                <TwoLineClamp text={keyDesc} />
             </div>
             <audio src={beepMp3} ref={audioRef} preload="auto"></audio>
         </div>

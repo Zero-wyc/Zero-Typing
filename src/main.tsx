@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import 'antd/dist/antd.css';
+import { createRoot } from 'react-dom/client';
 import './styles/forcedColors.css';
 
 import App from './App';
@@ -64,9 +63,10 @@ function ensureDefaultBackground() {
 // 初始化背景
 ensureDefaultBackground();
 
-ReactDOM.render(
+const rootElement = document.getElementById('root') as HTMLElement;
+const root = createRoot(rootElement);
+root.render(
     <React.StrictMode>
         <App />
-    </React.StrictMode>,
-    document.getElementById('root')
+    </React.StrictMode>
 );

@@ -1,4 +1,4 @@
-# typing-cn
+# Zero-Typing
 
 #### 介绍
 
@@ -23,3 +23,12 @@ Vite React generated.
 pnpm install
 pnpm dev
 ```
+
+---
+
+#### 本项目基于[typing-cn](https://github.com/barneyzhao/typing-cn)进行简单修改，并更换基础词库
+
+#### 并添加 `.github/workflows/gh-pages.yml`进行GitHub Action实行自动网页构建
+
+
+

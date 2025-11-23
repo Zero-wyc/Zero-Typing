@@ -23,3 +23,9 @@ Branch `master` is builded code.
 pnpm install
 pnpm dev
 ```
+
+---
+
+\####This project is simply modified based on [typing-cn](https://github.com/barneyZhao/typing-cn) and replaced the basic thesaurus
+
+\####And add `.github/workflows/gh-pages.yml` to implement GitHub Action to implement automatic web page construction
